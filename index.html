@@ -103,6 +103,62 @@
                 margin-bottom: 20px;
             }
         }
+        h1 {
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 20px auto;
+        }
+
+        .gallery-item {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.4s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            flex: 3; /* Increase width of the image on hover */
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            transition: all 0.4s ease;
+            transform: translateY(100%);
+        }
+
+        .gallery-item:hover .info {
+            transform: translateY(0);
+        }
+
     </style>
 </head>
 <body id="page-top" class="politics_version">
@@ -239,6 +295,15 @@
             </div>
         </div>
     </div><!-- end section -->
+    <h1>Nature Photography</h1>
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+1" alt="Nature 1"><div class="info">Nature 1</div></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+2" alt="Nature 2"><div class="info">Nature 2</div></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+3" alt="Nature 3"><div class="info">Nature 3</div></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+4" alt="Nature 4"><div class="info">Nature 4</div></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+5" alt="Nature 5"><div class="info">Nature 5</div></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/300x300.png?text=Nature+6" alt="Nature 6"><div class="info">Nature 6</div></div>
+    </div>
 
     <div class="copyrights">
         <div class="container">
